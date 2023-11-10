@@ -10,9 +10,7 @@ public class App
     {
     	EmailNotification email = new EmailNotification();
     	SMSNotification sms = new SMSNotification();
-        //MyService s1= new MyService(sms);
-    	MyService s1 = new MyService();
-    	s1.setNotifications(sms);
+        MyService s1= new MyService(sms);
         s1.notifyCustomer();
     }
 }

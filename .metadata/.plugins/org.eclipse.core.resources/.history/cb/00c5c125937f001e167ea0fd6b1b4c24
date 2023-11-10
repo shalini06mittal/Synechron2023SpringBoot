@@ -12,7 +12,6 @@ public class App
     	SMSNotification sms = new SMSNotification();
         //MyService s1= new MyService(sms);
     	MyService s1 = new MyService();
-    	s1.setNotifications(sms);
         s1.notifyCustomer();
     }
 }

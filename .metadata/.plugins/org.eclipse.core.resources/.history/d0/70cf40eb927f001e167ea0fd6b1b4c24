@@ -12,9 +12,6 @@ public class MyService {
 	 * MyService is dependent on object of class EmailNotification 
 	 */
 	Notifications notifications;
-	public MyService() {
-		// TODO Auto-generated constructor stub
-	}
 	// fulfilled via constructor
 	public MyService(Notifications notifications)
 	{
@@ -27,15 +24,6 @@ public class MyService {
 		//notifications = new EmailNotification();
 		this.notifications = notifications;
 	}
-	
-	public Notifications getNotifications() {
-		return notifications;
-	}
-
-	public void setNotifications(Notifications notifications) {
-		this.notifications = notifications;
-	}
-
 	public void notifyCustomer()
 	{
 		notifications.sendNotification("Whatever the message is...");

@@ -12,9 +12,6 @@ public class MyService {
 	 * MyService is dependent on object of class EmailNotification 
 	 */
 	Notifications notifications;
-	public MyService() {
-		// TODO Auto-generated constructor stub
-	}
 	// fulfilled via constructor
 	public MyService(Notifications notifications)
 	{
