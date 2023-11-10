@@ -1,0 +1,15 @@
+package com.demo.SpringCoreDemo.utility;
+
+public class SMSNotification implements Notifications{
+
+	public SMSNotification() {
+		System.out.println("SMS constructor");
+	}
+	public void sendNotification(String message)
+	{
+		System.out.println("Sending "+ message);
+		System.out.println("Through SMS");
+		// all other things for brevity
+	}
+	
+}

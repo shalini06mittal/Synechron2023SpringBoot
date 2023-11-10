@@ -6,6 +6,6 @@ import org.springframework.stereotype.Component;
 public class BasicService {
 
 	public BasicService() {
-		System.out.println("Basic constructor");
+		System.out.println("Basic service constructor");
 	}
 }

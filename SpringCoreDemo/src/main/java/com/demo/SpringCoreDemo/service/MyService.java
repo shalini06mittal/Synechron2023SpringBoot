@@ -1,22 +1,40 @@
 package com.demo.SpringCoreDemo.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
 import com.demo.SpringCoreDemo.utility.EmailNotification;
 import com.demo.SpringCoreDemo.utility.Notifications;
 import com.demo.SpringCoreDemo.utility.SMSNotification;
+import com.payment.PaymentProject.PaymentService;
 
+// <bean id="ob" class="">
+// MyService myService = new MyService()
+// MyService ob = new MyService()
+@Component("ob")
 public class MyService {
 	
 	/**
 	 * MyService uses EmailNotification class
 	 * HAS-A
 	 * MyService is dependent on object of class EmailNotification
-	 * Dependency Injection 
+	 * Dependency Injection is autowried in 3 ways
+	 * 1. constructor
+	 * 2. setter
+	 * 3. field
 	 */
+	// 2 beans qualify as valid candidates to be autowired?
+	@Autowired // used for has-a relationship only-> for reference types
+	@Qualifier("sms")
 	Notifications notifications;
+	@Autowired
+	PaymentService paymentService;
+	
 	public MyService() {
 		System.out.println("MyService default constructor");
 	}
 	// fulfilled via constructor
+
 	public MyService(Notifications notifications)
 	{
 		/**
@@ -30,18 +48,21 @@ public class MyService {
 		this.notifications = notifications;
 	}
 	
-	public Notifications getNotifications() {
-		return notifications;
-	}
-
-	public void setNotifications(Notifications notifications) {
-		this.notifications = notifications;
-	}
-
 	public void notifyCustomer()
 	{
 		notifications.sendNotification("Whatever the message is...");
+		System.out.println(paymentService.makePayment(1000, 10));
 		
 	}
+	public Notifications getNotifications() {
+		return notifications;
+	}
+	
+	public void setNotifications(Notifications notifications) {
+		System.out.println("MyService setter ");
+		this.notifications = notifications;
+	}
+
+	
 
 }

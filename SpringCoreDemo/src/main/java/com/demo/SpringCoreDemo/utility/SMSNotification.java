@@ -1,7 +1,13 @@
 package com.demo.SpringCoreDemo.utility;
 
+import org.springframework.stereotype.Component;
+
+@Component("sms")
 public class SMSNotification implements Notifications{
 
+	public SMSNotification() {
+		System.out.println("SMS constructor");
+	}
 	public void sendNotification(String message)
 	{
 		System.out.println("Sending "+ message);
