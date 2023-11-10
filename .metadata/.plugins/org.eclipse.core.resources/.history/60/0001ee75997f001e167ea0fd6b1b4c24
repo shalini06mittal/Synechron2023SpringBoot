@@ -1,0 +1,11 @@
+package com.demo.SpringCoreDemo;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class BasicService {
+
+	public BasicService() {
+		System.out.println("Validation constructor");
+	}
+}

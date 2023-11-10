@@ -9,11 +9,12 @@ public class MyService {
 	/**
 	 * MyService uses EmailNotification class
 	 * HAS-A
-	 * MyService is dependent on object of class EmailNotification 
+	 * MyService is dependent on object of class EmailNotification
+	 * Dependency Injection 
 	 */
 	Notifications notifications;
 	public MyService() {
-		// TODO Auto-generated constructor stub
+		System.out.println("MyService default constructor");
 	}
 	// fulfilled via constructor
 	public MyService(Notifications notifications)
@@ -25,6 +26,7 @@ public class MyService {
 		 * 
 		 */
 		//notifications = new EmailNotification();
+		System.out.println("MyService parameterized constructor");
 		this.notifications = notifications;
 	}
 	

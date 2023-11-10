@@ -1,0 +1,16 @@
+package com.demo.SpringCoreDemo;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.Configuration;
+
+// annotation based configuration
+@Configuration
+public class AppSpringConfig {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		//ApplicationContext context = //
+	}
+
+}

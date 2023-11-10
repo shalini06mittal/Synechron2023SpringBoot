@@ -1,0 +1,26 @@
+package com.demo.SpringCoreDemo;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+
+import com.demo.SpringCoreDemo.utility.EmailNotification;
+
+// annotation based configuration
+@Configuration
+// where the classes are located for spring to load and instantiate them 
+// scan which classes/components/beans to load and instantiate
+@ComponentScan // look for all the classes in the
+public class AppSpringConfig {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		//ApplicationContext context = //
+		System.out.println("main starts");
+		ApplicationContext context = new AnnotationConfigApplicationContext(AppSpringConfig.class);
+		EmailNotification email;
+	}
+
+}
