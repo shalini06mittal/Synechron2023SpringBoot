@@ -1,0 +1,20 @@
+package com.demo.SpringCoreDemo.utility;
+
+// loosely coupled and highly cohesive
+public class EmailNotification {
+
+	public void sendNotification(String message)
+	{
+		System.out.println("Sending "+ message);
+		System.out.println("Through Email");
+		// all other things for brevity
+	}
+	
+	public void sendNotificationBySMS(String message)
+	{
+		System.out.println("Sending "+ message);
+		System.out.println("Through SMS");
+		// all other things for brevity
+	}
+	
+}

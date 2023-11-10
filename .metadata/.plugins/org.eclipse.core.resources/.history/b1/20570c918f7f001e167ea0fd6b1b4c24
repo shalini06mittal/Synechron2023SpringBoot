@@ -1,0 +1,18 @@
+package com.demo.SpringCoreDemo.service;
+
+import com.demo.SpringCoreDemo.utility.EmailNotification;
+
+public class MyService {
+	
+	EmailNotification emailNotification;
+	
+	public MyService()
+	{
+		emailNotification = new EmailNotification();
+	}
+	public void notifyCustomer()
+	{
+		emailNotification.sendNotification("Email check!!");
+	}
+
+}

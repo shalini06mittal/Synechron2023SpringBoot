@@ -1,0 +1,12 @@
+package com.threads;
+
+public class StringBufferBuilderDemo {
+
+	public static void main(String[] args) {
+		StringBuffer b1 = new StringBuffer(); // faster + not synchronized
+		StringBuilder b2 = new StringBuilder();// slower + synchronized
+		
+
+	}
+
+}

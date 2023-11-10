@@ -1,0 +1,12 @@
+package com.demo.SpringCoreDemo.utility;
+
+public class EmailNotification {
+
+	public void sendNotification(String message)
+	{
+		System.out.println("Sending "+ message);
+		System.out.println("Through Email");
+		// all other things for brevity
+	}
+	
+}

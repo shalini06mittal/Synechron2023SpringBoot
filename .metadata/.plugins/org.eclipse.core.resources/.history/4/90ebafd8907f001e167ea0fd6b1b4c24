@@ -1,0 +1,25 @@
+package com.demo.SpringCoreDemo.service;
+
+import com.demo.SpringCoreDemo.utility.EmailNotification;
+import com.demo.SpringCoreDemo.utility.Notifications;
+import com.demo.SpringCoreDemo.utility.SMSNotification;
+
+public class MyService {
+	
+	/**
+	 * MyService uses EmailNotification class
+	 * HAS-A
+	 * MyService is dependent on object of class EmailNotification 
+	 */
+	Notifications notifications;
+	
+	public MyService()
+	{
+		
+	}
+	public void notifyCustomer()
+	{
+		
+	}
+
+}
